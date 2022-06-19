@@ -57,7 +57,7 @@ main {
   height: 400px;
   max-height: fit-content;
   padding-right: 720px;
-  
+  margin-left: 20px
 }
 
 .grid {
