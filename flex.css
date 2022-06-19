@@ -179,6 +179,7 @@ main {
     .grid {
         height: 40%;
         max-width: 40%;
+        margin-top: 30px;
     }
     
 }
