@@ -1,256 +1,203 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+
 
 body {
-  background-color: hsl(0, 0%, 95%);
-  padding: 10px;
+    background-color: hsl(0, 0%, 95%);
+    padding: 10px;
+  }
+
+  nav {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  li {
+    display: inline-block;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 5px;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 25px;
+  }
+  
+  li a:hover {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid black;
+  }
+
+  main {
+    margin: 150px;
 }
 
-nav {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-}
-
-li {
-  display: inline-block;
-  justify-content: space-between;
-  list-style-type: none;
-  padding: 5px;
-}
-
-li a {
-  text-decoration: none;
-  color: white;
-  background-color: black;
-  padding: 10px;
-  border-radius: 25px;
-}
-
-li a:hover {
-  text-decoration: none;
-  color: black;
-  background-color: white;
-  padding: 10px;
-  border-radius: 25px;
-  border: 2px solid black;
-}
-
-main {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-}
 
 /*  FOR THE GRID */
 
 .wrapper {
-  max-width: 50%;
-  width: auto;
-  height: 400px;
-  max-height: fit-content;
-  padding-right: 720px;
-  margin-left: 20px
-}
+    /* max-width: 50%; */
+    /* width: auto; */
+    height: 400px;
+    /* max-height: fit-content; */
+    /* padding-right: 720px; */
+    margin: 20px;
+  }
+  
+  .grid {
+      margin: auto;
+    background-color: black;
+    padding: 50px;
+    width: 60%;
+    height: 120%;
+    gap: 15px;
+    display: grid;
+    grid-template-areas:
+      "grid-1 grid-1 grid-1 grid-1 grid-2 grid-2"
+      "grid-1 grid-1 grid-1 grid-1 grid-2 grid-2"
+      "grid-1 grid-1 grid-1 grid-1 grid-2 grid-2"
+      "grid-1 grid-1 grid-1 grid-1 grid-2 grid-2"
+      "grid-1 grid-1 grid-1 grid-1 grid-2 grid-2"
+      "grid-1 grid-1 grid-1 grid-1 grid-2 grid-2"
+      "grid-3 grid-3 grid-3 grid-4 grid-4 grid-4"
+      "grid-3 grid-3 grid-3 grid-4 grid-4 grid-4"
+      "grid-3 grid-3 grid-3 grid-4 grid-4 grid-4"
+      "grid-3 grid-3 grid-3 grid-5 grid-5 grid-5"
+      "grid-3 grid-3 grid-3 grid-5 grid-5 grid-5"
+      "grid-3 grid-3 grid-3 grid-5 grid-5 grid-5"
+      "grid-3 grid-3 grid-3 grid-5 grid-5 grid-5";
+  }
+  
+  .grid-1 {
+    background-color: orangered;
+    grid-area: grid-1;
+  }
+  .grid-2 {
+    background-color: orange;
+  
+    grid-area: grid-2;
+  }
+  .grid-3 {
+    background-color: rgb(66, 192, 66);
+  
+    grid-area: grid-3;
+  }
+  .grid-4 {
+    background-color: lightseagreen;
+    grid-area: grid-4;
+  }
+  .grid-5 {
+    background-color: lightseagreen;
+    /* padding-top: 55px; */
+    grid-area: grid-5;
+  }
+    
+  
+  /* FOR THE FLEXBOX */
 
-.grid {
-  margin: 0 300px;
-  background-color: black;
-  padding: 50px;
-  width: 100%;
-  height: 120%;
-  gap: 15px;
-  display: grid;
-  grid-template-areas:
-    "grid-1 grid-1 grid-1 grid-1 grid-2 grid-2"
-    "grid-1 grid-1 grid-1 grid-1 grid-2 grid-2"
-    "grid-1 grid-1 grid-1 grid-1 grid-2 grid-2"
-    "grid-1 grid-1 grid-1 grid-1 grid-2 grid-2"
-    "grid-1 grid-1 grid-1 grid-1 grid-2 grid-2"
-    "grid-1 grid-1 grid-1 grid-1 grid-2 grid-2"
-    "grid-3 grid-3 grid-3 grid-4 grid-4 grid-4"
-    "grid-3 grid-3 grid-3 grid-4 grid-4 grid-4"
-    "grid-3 grid-3 grid-3 grid-4 grid-4 grid-4"
-    "grid-3 grid-3 grid-3 grid-5 grid-5 grid-5"
-    "grid-3 grid-3 grid-3 grid-5 grid-5 grid-5"
-    "grid-3 grid-3 grid-3 grid-5 grid-5 grid-5"
-    "grid-3 grid-3 grid-3 grid-5 grid-5 grid-5";
-}
-
-.grid-1 {
-  background-color: orangered;
-  grid-area: grid-1;
-}
-.grid-2 {
-  background-color: orange;
-
-  grid-area: grid-2;
-}
-.grid-3 {
-  background-color: rgb(66, 192, 66);
-
-  grid-area: grid-3;
-}
-.grid-4 {
-  background-color: lightseagreen;
-  grid-area: grid-4;
-}
-.grid-5 {
-  background-color: lightseagreen;
-  /* padding-top: 55px; */
-  grid-area: grid-5;
-}
-
-/* FOR THE FLEX */
-/* STYLING THE CARDS */
-
-.card {
-  width: auto;
-  max-width: 1440px;
-  height: auto;
-  max-height: 420px;
-  display: flex;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1440px;
 }
 
 .sedans {
-  background-color: hsl(31, 77%, 52%);
-  padding: 30px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  width: 90%;
-  min-width: 180px;
+    background-color: hsl(31, 77%, 52%);
+    padding: 30px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 300px;
 }
 
 .suvs {
-  background-color: hsl(184, 100%, 22%);
-  padding: 30px;
-  width: 90%;
-  min-width: 180px;
+    background-color: hsl(184, 100%, 22%);
+    padding: 30px;
+    width: 300px;
 }
 
 .luxury {
-  background-color: hsl(179, 100%, 13%);
-  padding: 30px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  width: 90%;
-  min-width: 180px;
-}
-
-/* RESPONSIVENESS */
-
-@media (max-width: 1440px){
-    .grid {
-        height: 100%;
-        max-width: 100%;
-    }
-    .wrapper {
-        max-width: 50%;
-        width: auto;
-        height: 400px;
-        max-height: fit-content;
-        padding-right: 500px;
-        
-      }
-}
-
-@media (max-width: 1000px){
-    .grid {
-        height: 100%;
-        max-width: 100%;
-    }
-    .wrapper {
-        max-width: 50%;
-        width: auto;
-        height: 400px;
-        max-height: fit-content;
-        padding-right: 500px;
-        
-      }
-}
-
-@media (max-width: 500px){
-    .grid {
-        height: 40%;
-        max-width: 40%;
-        margin-top: 30px;
-    }
-    
-}
-
-@media (max-width: 800px) {
-    .grid {
-        height: 60%;
-        max-width: 60%;
-    }
-    .wrapper {
-        max-width: 50%;
-        width: auto;
-        height: 400px;
-        max-height: fit-content;
-        padding-right: 300px;
-        
-      }
-  .card {
-    flex-direction: column;
-    width: auto;
-    height: auto;
-    max-width: 400px;
-  }
-  .sedans {
-    background-color: hsl(31, 77%, 52%);
-    padding: 40px;
-    width: auto;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-
-  .suvs {
-    background-color: hsl(184, 100%, 22%);
-    padding: 40px;
-    width: auto;
-  }
-
-  .luxury {
     background-color: hsl(179, 100%, 13%);
-    padding: 40px;
-    width: auto;
-    border-bottom-left-radius: 10px;
+    padding: 30px;
+    border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-  }
+    width: 300px;
+ }
+
+ 
+@media (max-width: 1219px) {
+    .sedans {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .suvs {
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+     }
+
+    .luxury {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+     }
 }
 
-/* STYLING THE MAIN TEXTS */
+@media (max-width: 919px) {
+    .sedans {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
 
-h1 {
-  color: hsl(0, 0%, 95%);
-  font-family: 'Big Shoulders Display', cursive;
-  font-size: 30px;
-  margin: 30px 0;
+    .suvs {
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+     }
+
+
+    .luxury {
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+     }
 }
 
-p {
-  color: hsla(0, 0%, 100%, 0.75);
-  font-family: 'Lexend Deca', sans-serif;
-  font-size: 15px;
-  padding: 0px;
-  line-height: 20px;
-  margin: 30px 0 100px;
-  height: 20%;
+ /* STYLING THE MAIN TEXTS */
+
+h2 {
+    color: hsl(0, 0%, 95%);
+    font-size: 30px;
+    margin: 30px 0; 
+}
+
+p { 
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+    padding: 0px;
+    line-height: 20px;
+    margin: 30px 0 50px;
+    height: 20%;
 }
 
 /* STYLING THE BUTTONS */
 
 .sedanbtn,
 .suvbtn,
-.luxbtn {
+.luxurybtn {
   margin: 50px 0px;
   box-sizing: border-box;
   color: hsl(0, 0%, 95%);
@@ -273,7 +220,7 @@ p {
   border-radius: 25px;
 }
 
-.luxbtn a {
+.luxurybtn a {
   text-decoration: none;
   color: hsl(179, 100%, 13%);
   background-color: hsl(0, 0%, 95%);
@@ -297,7 +244,7 @@ p {
   border-radius: 25px;
   border: 2px solid white;
 }
-.luxbtn a:hover {
+.luxurybtn a:hover {
   text-decoration: none;
   color: white;
   background-color: transparent;
@@ -305,3 +252,4 @@ p {
   border-radius: 25px;
   border: 2px solid white;
 }
+
